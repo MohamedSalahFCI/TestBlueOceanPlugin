@@ -41,5 +41,11 @@ pipeline {
       }
     }
 
+    stage('final Input') {
+      steps {
+        input(message: 'Are you sure to deploy ?', ok: 'yes,I am Sure')
+      }
+    }
+
   }
 }
